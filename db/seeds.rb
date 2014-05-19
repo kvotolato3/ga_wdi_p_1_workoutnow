@@ -1,4 +1,13 @@
+
 Exercise.delete_all
+User.delete_all
+
+puts "Creating Users..."
+kathleen = User.create(email: "kathleen@example.com", password: "12345678")
+kelly = User.create(email: "kelly@example.com", password: "12345678")
+katie = User.create(email: "katie@example.com", password: "12345678")
+
+puts "Creating Exercises..."
 Exercise.create(
   name: 'Inchworm',
   description: "Stand up tall with the legs straight, and do like Lil’ Jon and let
