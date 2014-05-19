@@ -59,7 +59,7 @@ ActiveRecord::Schema.define(version: 20140519183412) do
   add_index "workout_exercises", ["workout_id"], name: "index_workout_exercises_on_workout_id", using: :btree
 
   create_table "workouts", force: true do |t|
-    t.string   "name"
+    t.string   "name",       default: "Untitled Workout"
     t.integer  "duration"
     t.datetime "created_at"
     t.datetime "updated_at"
