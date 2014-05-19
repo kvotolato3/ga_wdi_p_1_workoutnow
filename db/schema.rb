@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20140519183412) do
   create_table "workouts", force: true do |t|
     t.string   "name",       default: "Untitled Workout"
     t.integer  "duration"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
