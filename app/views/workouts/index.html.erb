@@ -1,0 +1,16 @@
+<%= form_tag(exercises_path, method: "get") do %>
+  <%= label_tag(:desired_duration, "Minutes: ") %>
+  <%= number_field_tag(:desired_duration) %>
+  <%= label_tag(:desired_category, "Category: ") %>
+  <%= text_field_tag(:desired_category) %>
+  <%= submit_tag("Workout Now") %>
+<% end %>
+
+
+    <ul>
+    <% @workouts.each do |workout| %>
+      <li><%= workout.name %><br>
+          <%= workout.duration %><br>
+      </li>
+    <% end %>
+    </ul>
