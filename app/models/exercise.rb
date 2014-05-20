@@ -24,7 +24,7 @@ class Exercise < ActiveRecord::Base
     elsif minutes == 1
       minutes.to_s + " minute"
     elsif minutes < 1
-      seconds.to_s + "seconds"
+      seconds.to_s + " seconds"
     end
   end
 end
