@@ -8,7 +8,12 @@
 
 <% if @exercises %>
   <h1>Your personalized workout</h1>
-  </p>
+  <%= form_for @workout do |f| %>
+    <%= f.hidden_field :exercise_ids, value: @exercises.map(&:id).join(",") %>
+    <%= f.submit "Save this workout" %>
+  <% end %>
+
+
     <ul>
     <% @exercises.each do |exercise| %>
       <li><%= exercise.name %><br>
