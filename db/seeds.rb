@@ -224,3 +224,139 @@ Exercise.create(
   photo_url: "https://greatist.com/sites/default/files/styles/article-content-732/public/Mountain-Climber_edited-300x300_0.jpg?itok=ySL7Djjy",
   category: "Bodyweight"
   )
+
+Exercise.create(
+  name: 'Pistol Squat',
+  description: "There may be no gun permit necessary for this one, but it’s still no joke. Stand holding the arms straight out in front of the body,
+  and raise the right leg, flexing the right ankle and pushing the hips back. Then lower the body while keeping the right leg raised. Hold (have fun
+    with that), then return to standing.",
+  seconds_duration: 120,
+  repetitions: 6,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Pistol-Squat_edited-300x300_0.jpg?itok=rcw0v3Ne",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Squat Reach and Jump',
+  description: "Ready to add some pizzazz (and cardio!) to that squat? Perform a normal squat, but immediately jump up, reaching
+  the arms straight overhead. Aim for 15 reps, taking a quick breather before the next set.",
+  seconds_duration: 120,
+  repetitions: 15,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Pistol-Squat_edited-300x300_0.jpg?itok=rcw0v3Ne",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Chair Squat Pose',
+  description: "Stand with the feet hip-distance apart and squat until the thighs are parallel to the floor
+  while swinging the arms up. Straighten the legs, then lift up the right knee while swinging the left arm
+    outside the right knee. Return to standing and repeat on the other side.",
+  seconds_duration: 120,
+  repetitions: 2,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Pistol-Squat_edited-300x300_0.jpg?itok=rcw0v3Ne",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Step-Up',
+  description: "This may be self-explanatory, but just in case — find a step or bench, and place the right foot on the elevated surface.
+  Step up until the right leg is straight (do it for Channing!), then return to start. Repeat, aiming for 10-12 reps on each side.",
+  seconds_duration: 240,
+  repetitions: 20,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Pistol-Squat_edited-300x300_0.jpg?itok=rcw0v3Ne",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Single Leg Deadlift',
+  description: "Start in a standing position with the feet together. Lift the right leg slightly, and lower the arms and torso
+  while raising the right leg behind the body. Keep the left knee slightly bent and reach the arms as close to the floor as possible.
+    Raise the torso while lowering the right leg. Switch legs.",
+  seconds_duration: 60,
+  repetitions: 2,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Pistol-Squat_edited-300x300_0.jpg?itok=rcw0v3Ne",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Quadruped Leg Lift',
+  description: "Starting on the hands and knees, keep a flat back and engage the core. Raise the left leg straight back,
+  stopping when the foot is hip-level and the thigh parallel to the floor. Balance for as long as possible, then raise
+  the bottom right toe off the floor, tightening the butt, back, and abs (try to be graceful here!). Hold for up to 10 seconds, then switch legs.",
+  seconds_duration: 60,
+  repetitions: 2,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Pistol-Squat_edited-300x300_0.jpg?itok=rcw0v3Ne",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Calf Raise',
+  description: "From a standing position, slowly rise up on the toes, keeping the knees straight and heels off the floor.
+  Hold briefly, then come back down. Aaaand repeat. Try standing on something elevated (like a step) to achieve a wider range of motion.",
+  seconds_duration: 60,
+  repetitions: 20,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Pistol-Squat_edited-300x300_0.jpg?itok=rcw0v3Ne",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Standard Push-Up',
+  description: "There’s a reason this one’s a classic. With hands shoulder-width apart, keep the feet flexed at hip distance,
+  and tighten the core. Bend the elbows until the chest reaches the ground, and then push back up (make sure to keep the elbows
+    tucked close to the body). That’s one!",
+  seconds_duration: 60,
+  repetitions: 8,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Standard-Push-Up-300x300_0.jpg?itok=JOh-S1bx",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Dolphin Push-Up',
+  description: "Start out in dolphin pose (think: down-dog with elbows on the floor). Lean forward,
+  lowering the shoulders until the head is over the hands. Pull up the arms and return to the starting position.
+  (No ocean necessary.)",
+  seconds_duration: 60,
+  repetitions: 8,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Standard-Push-Up-300x300_0.jpg?itok=JOh-S1bx",
+  category: "Bodyweight"
+  )
+
+Exercise.create(
+  name: 'Superwoman',
+  description: "Want some superpowers? Lie face down with arms and legs extended.
+  Keeping the torso as still as possible, simultaneously raise the arms and legs to form a small curve in the body. Cape optional.",
+  seconds_duration: 20,
+  repetitions: 8,
+  difficulty: 'Medium',
+  source_url: "http://greatist.com/fitness/50-bodyweight-exercises-you-can-do-anywhere",
+  equipment: 'None',
+  photo_url: "http://greatist.com/sites/default/files/styles/article-content-732/public/Standard-Push-Up-300x300_0.jpg?itok=JOh-S1bx",
+  category: "Bodyweight"
+  )
