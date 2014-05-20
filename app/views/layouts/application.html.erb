@@ -8,6 +8,7 @@
 </head>
 <body>
   </div>
+    <%= link_to 'Home', root_path %>
     <% if user_signed_in? %>
       Logged in as <%= current_user.email %>.
       <%= link_to 'Edit profile', edit_user_registration_path %> |
