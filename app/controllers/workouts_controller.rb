@@ -11,6 +11,7 @@ class WorkoutsController < ApplicationController
     @exercises.each do |exercise|
       @workout.exercises << Exercise.find(exercise.to_i)
     end
+    @workout.sum_duration
     flash[:notice] = 'Workout has been successfully saved!'
     redirect_to workout_path(@workout)
   end

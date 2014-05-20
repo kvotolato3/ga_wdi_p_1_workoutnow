@@ -9,8 +9,7 @@
 
     <ul>
     <% @workouts.each do |workout| %>
-      <li><%= link_to workout.name, workout_path(workout) %><br>
-          <%= workout.duration %><br>
+      <li><%= link_to workout.name, workout_path(workout) %> | Duration: <%= workout.duration %><br>
       </li>
     <% end %>
     </ul>
