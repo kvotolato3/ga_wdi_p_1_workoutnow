@@ -21,7 +21,7 @@
           Repetitions: <%= exercise.repetitions %><br>
           Est. Time: <%= exercise.seconds_duration %><br>
           Source: <%= exercise.source_url %><br>
-          <img src=<%= exercise.photo_url %>/>
+          <%= image_tag exercise.photo_url %>
       </li>
     <% end %>
     </ul>
