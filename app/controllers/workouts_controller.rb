@@ -12,6 +12,10 @@ class WorkoutsController < ApplicationController
       @workout.exercises << Exercise.find(exercise.to_i)
     end
     flash[:notice] = 'Workout has been successfully saved!'
-    redirect_to workouts_path
+    redirect_to workout_path(@workout)
+  end
+
+  def show
+    @exercises = Workout.find(params[:id]).exercises
   end
 end
