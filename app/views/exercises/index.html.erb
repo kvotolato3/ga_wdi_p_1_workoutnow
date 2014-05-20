@@ -3,8 +3,6 @@
   <input id="desired_duration" max="120.0" min="1.0" name="desired_duration" step="1.0" type="number" />
   <%= label_tag(:desired_category, "Category: ") %>
   <%= select_tag(:desired_category, options_for_select([['Bodyweight','Bodyweight']])) %>
-
-
   <%= submit_tag("Workout Now") %>
 <% end %>
 
