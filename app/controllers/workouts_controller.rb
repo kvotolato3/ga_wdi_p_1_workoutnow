@@ -6,7 +6,6 @@ class WorkoutsController < ApplicationController
 
   def create
     @workout = Workout.new(user_id: current_user.id)
-    binding.pry
     @workout.save
     @exercises = params[:workout]["exercise_ids"].split(',')
     @exercises.each do |exercise|
