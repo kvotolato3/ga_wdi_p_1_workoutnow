@@ -16,6 +16,7 @@ class WorkoutsController < ApplicationController
   end
 
   def show
-    @exercises = Workout.find(params[:id]).exercises
+    @workout = Workout.find(params[:id])
+    @exercises = @workout.exercises
   end
 end

@@ -13,18 +13,8 @@
     <%= f.submit "Save this workout" %>
   <% end %>
 
+<%= render 'workouts/displayworkout', exercises: @exercises %>
 
-    <ul>
-    <% @exercises.each do |exercise| %>
-      <li><%= exercise.name %><br>
-          <%= exercise.description %><br>
-          Repetitions: <%= exercise.repetitions %><br>
-          Est. Time: <%= exercise.seconds_duration %><br>
-          Source: <%= exercise.source_url %><br>
-          <%= image_tag exercise.photo_url %>
-      </li>
-    <% end %>
-    </ul>
 <% end %>
 
 
