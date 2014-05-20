@@ -1,15 +1,7 @@
-<%= form_tag(exercises_path, method: "get") do %>
-  <%= label_tag(:desired_duration, "Minutes: ") %>
-  <%= number_field_tag(:desired_duration) %>
-  <%= label_tag(:desired_category, "Category: ") %>
-  <%= text_field_tag(:desired_category) %>
-  <%= submit_tag("Workout Now") %>
-<% end %>
-
-
-    <ul>
-    <% @workouts.each do |workout| %>
-      <li><%= link_to workout.name, workout_path(workout) %> | Duration: <%= workout.duration %> minutes<br>
-      </li>
-    <% end %>
-    </ul>
+<h1>List of saved workouts</h1>
+  <ul>
+  <% @workouts.each do |workout| %>
+    <li><%= link_to workout.name, workout_path(workout) %> | Duration: <%= workout.duration %> minutes<br>
+    </li>
+  <% end %>
+  </ul>
