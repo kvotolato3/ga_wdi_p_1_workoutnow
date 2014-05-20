@@ -18,4 +18,13 @@ class Exercise < ActiveRecord::Base
     seconds_duration % 60
   end
 
+  def duration
+    if minutes > 1
+      minutes.to_s + " minutes"
+    elsif minutes == 1
+      minutes.to_s + " minute"
+    elsif minutes < 1
+      seconds.to_s + "seconds"
+    end
+  end
 end
