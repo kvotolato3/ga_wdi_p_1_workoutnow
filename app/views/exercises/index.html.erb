@@ -2,10 +2,8 @@
   <%= label_tag(:desired_duration, "Minutes: ") %>
   <input id="desired_duration" max="120.0" min="1.0" name="desired_duration" step="1.0" type="number" />
   <%= label_tag(:desired_category, "Category: ") %>
-  <input id="desired_category" name="desired_category" type="text" list = "categories" />
-    <datalist id = "categories">
-      <option value = "Bodyweight">
-    </datalist>
+  <%= select_tag(:desired_category, options_for_select([['Bodyweight','Bodyweight']])) %>
+
 
   <%= submit_tag("Workout Now") %>
 <% end %>
