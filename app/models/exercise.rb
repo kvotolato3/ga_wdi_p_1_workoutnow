@@ -9,4 +9,13 @@ class Exercise < ActiveRecord::Base
       end
     exercises
   end
+
+  def minutes
+    seconds_duration/60
+  end
+
+  def seconds
+    seconds_duration % 60
+  end
+
 end
