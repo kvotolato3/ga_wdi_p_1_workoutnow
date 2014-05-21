@@ -27,8 +27,10 @@
     <% end %>
 
   <%= yield %>
+  <% if Rails.env.development?%>
   <p><%= params.inspect %></p>
   <p><%= flash.inspect %></p>
+  <% end %>
 </div>
 
 </body>
