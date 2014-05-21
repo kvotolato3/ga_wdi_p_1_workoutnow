@@ -3,27 +3,33 @@
 <head>
   <title>P1Workoutnow</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  </div>
-    <%= link_to 'Home', root_path %>
-    <% if user_signed_in? %>
-      Logged in as <%= current_user.email %>.
-      <%= link_to 'Edit profile', edit_user_registration_path %> |
-      <%= link_to "Logout", destroy_user_session_path, method: :delete %> |
-      <%= link_to "My Workouts", workouts_path %>
-      <% else %>
-      <%= link_to "Sign up", new_user_registration_path %> |
-      <%= link_to "Login", new_user_session_path %>
+<div class = 'container'>
+    </div>
+      <%= link_to 'Home', root_path %>
+      <% if user_signed_in? %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to 'Edit profile', edit_user_registration_path %> |
+        <%= link_to "Logout", destroy_user_session_path, method: :delete %> |
+        <%= link_to "My Workouts", workouts_path %>
+        <% else %>
+        <%= link_to "Sign up", new_user_registration_path %> |
+        <%= link_to "Login", new_user_session_path %>
+      <% end %>
+    </div>
+
+    <% flash.each do |key, message| %>
+      <%= content_tag :div, message, class: key %>
     <% end %>
-  </div>
 
-  <% flash.each do |key, message| %>
-    <%= content_tag :div, message, class: key %>
-  <% end %>
+  <%= yield %>
+  <p><%= params.inspect %></p>
+  <p><%= flash.inspect %></p>
+</div>
 
-<%= yield %>
 </body>
 </html>
