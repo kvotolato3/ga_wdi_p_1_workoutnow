@@ -21,8 +21,6 @@ ActiveRecord::Schema.define(version: 20140519183412) do
     t.integer  "seconds_duration"
     t.integer  "repetitions"
     t.text     "description"
-    t.string   "equipment"
-    t.string   "difficulty"
     t.string   "photo_url"
     t.string   "category"
     t.datetime "created_at"
