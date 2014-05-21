@@ -23,11 +23,18 @@
       <% end %>
     </div>
 
+  <div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
     <% flash.each do |key, message| %>
       <%= content_tag :div, message, class: key %>
     <% end %>
 
   <%= yield %>
+  </div>
+  <div class="col-md-3"></div>
+  </div>
+
   <% if Rails.env.development?%>
   <p><%= params.inspect %></p>
   <p><%= flash.inspect %></p>
