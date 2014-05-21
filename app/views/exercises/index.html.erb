@@ -1,20 +1,24 @@
-<%= form_tag(exercises_path, method: "get") do %>
-  <%= label_tag(:desired_duration, "Minutes: ") %>
-  <input id="desired_duration" max="120.0" min="1.0" name="desired_duration" step="1.0" type="number" />
-  <%= label_tag(:desired_category, "Category: ") %>
-  <%= select_tag(:desired_category, options_for_select([['Bodyweight','Bodyweight']])) %>
-  <%= submit_tag("Workout Now") %>
-<% end %>
+<link rel="stylesheet" href="../../../assets/stylesheets/workouts.css">
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6">
+    <%= form_tag(exercises_path, method: "get") do %>
+      <%= label_tag(:desired_duration, "Minutes: ") %>
+      <input id="desired_duration" max="120.0" min="1.0" name="desired_duration" step="1.0" type="number" />
+      <%= label_tag(:desired_category, "Category: ") %>
+      <%= select_tag(:desired_category, options_for_select([['Bodyweight','Bodyweight']])) %>
+      <%= submit_tag("Workout Now") %>
+    <% end %>
+    <% if @exercises %>
+    <h1>Your personalized workout</h1>
+    <%= form_for @workout do |f| %>
+      <%= f.hidden_field :exercise_ids, value: @exercises.map(&:id).join(",") %>
+      <%= f.submit "Save this workout" %>
+    <% end %>
 
-<% if @exercises %>
-  <h1>Your personalized workout</h1>
-  <%= form_for @workout do |f| %>
-    <%= f.hidden_field :exercise_ids, value: @exercises.map(&:id).join(",") %>
-    <%= f.submit "Save this workout" %>
-  <% end %>
-
-<%= render 'workouts/displayworkout', exercises: @exercises %>
-
-<% end %>
-
+    <%= render 'workouts/displayworkout', exercises: @exercises %>
+    <% end %>
+  </div>
+  <div class="col-md-3"></div>
+</div>
 
