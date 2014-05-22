@@ -30,7 +30,8 @@ li {
   display: inline;
 }
 
-.logo {
+.navbar-brand {
   font-family: 'Oswald', sans-serif;
-  color: red;
+  font-size:large;
   }
+
