@@ -31,7 +31,12 @@ li {
   font-size:large;
   }
 
-.form-inline {
+.well {
+  margin: 15px;
+  background-color: rgba(255,255,255, 0.4) !important;
+  }
+
+.form {
   margin-top: 10px;
   padding: 10px;
   }
@@ -47,6 +52,12 @@ li {
   background-position: bottom;
   background-repeat:no-repeat;
   background-size:cover;
+}
+
+
+
+p {
+  opacity: 1.0;
 }
 
 
