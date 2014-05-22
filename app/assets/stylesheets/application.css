@@ -35,3 +35,12 @@ li {
   font-size:large;
   }
 
+.logged_in li {
+  color: red;
+}
+
+.form-inline {
+  margin-top: 10px;
+  padding: 10px;
+  }
+
