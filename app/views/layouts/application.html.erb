@@ -12,40 +12,39 @@
 </head>
 <body>
   <div class="container">
-    <div class="navbar-collapse collapse">
-      <%= link_to "Workout Now!", root_path, class: "navbar-brand"%>
-      <% if user_signed_in? %>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li>Logged in as <%= current_user.email %>.</li>
-          <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
-          <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
-          <li><%= link_to "My Workouts", workouts_path %></li>
-          <% else %>
-          <li><%= link_to "Sign up", new_user_registration_path %></li>
-          <li><%= link_to "Login", new_user_session_path %></li>
-        </ul>
-      <% end %>
+    <div class="navbar navbar-inverse navbar-static-top" role="navigation">
+        <div class="navbar-collapse collapse">
+          <%= link_to "Workout Now!", root_path, class: "navbar-brand"%>
+            <% if user_signed_in? %>
+            <ul class="nav navbar-nav navbar-right">
+              <li>Logged in as <%= current_user.email %>.</li>
+              <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
+              <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to "My Workouts", workouts_path %></li>
+              <% else %>
+              <li><%= link_to "Sign up", new_user_registration_path %></li>
+              <li><%= link_to "Login", new_user_session_path %></li>
+            </ul>
+          <% end %>
+        </div>
+      </div>
     </div>
-  </div>
 
   <div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
-    <% flash.each do |key, message| %>
-      <%= content_tag :div, message, class: key %>
-    <% end %>
-
-  <%= yield %>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <% flash.each do |key, message| %>
+        <%= content_tag :div, message, class: key %>
+      <% end %>
+      <%= yield %>
+    </div>
+    <div class="col-md-3"></div>
+    </div>
+      <% if Rails.env.development?%>
+        <p><%= params.inspect %></p>
+        <p><%= flash.inspect %></p>
+      <% end %>
   </div>
-  <div class="col-md-3"></div>
-  </div>
-
-  <% if Rails.env.development?%>
-  <p><%= params.inspect %></p>
-  <p><%= flash.inspect %></p>
-  <% end %>
-</div>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
