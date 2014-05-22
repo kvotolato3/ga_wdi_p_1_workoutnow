@@ -8,13 +8,14 @@
 <%= render 'workouts/displayworkout', exercises: @exercises %>
 
 <% else %>
-  <div class="jumbotron">
+<div id="header">
+  <div class="well">
     <p>Use "Workout Now" to generate a workout of a desired length and category.</p>
     <form class="form-inline" role="form">
       <%= form_tag(exercises_path, method: "get") do %>
       <div class="form-group">
         <%= label_tag(:desired_duration, "Minutes: ") %>
-        <input id="desired_duration" max="120.0" min="1.0" name="desired_duration" step="1.0" type="number" />
+        <input id="desired_duration" max="30.0" min="1.0" name="desired_duration" step="1.0" type="number" />
       </div>
       <div class="form-group">
         <%= label_tag(:desired_category, "Category: ") %>
@@ -24,4 +25,5 @@
       <% end %>
     </form>
   </div>
+ </div>
 <% end %>
