@@ -8,11 +8,12 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <%= csrf_meta_tags %>
+  <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 </head>
 <body>
   <div class="container">
     <div class="navbar-collapse collapse">
-      <h2><%= link_to "Workout Now!", root_path %></h2>
+      <h2 class="logo"><%= link_to "Workout Now!", root_path %></h2>
       <% if user_signed_in? %>
         Logged in as <%= current_user.email %>.
         <ul>

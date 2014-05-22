@@ -29,3 +29,8 @@ li {
 .collapse li {
   display: inline;
 }
+
+.logo {
+  font-family: 'Oswald', sans-serif;
+  color: red;
+  }
