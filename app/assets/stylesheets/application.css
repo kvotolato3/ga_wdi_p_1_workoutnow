@@ -14,10 +14,6 @@
  *= require_self
  */
 
-.collapse {
-  background-color: black;
-}
-
 ul {
  list-style: none;
  padding-left:0;
