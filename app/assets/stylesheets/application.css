@@ -14,10 +14,18 @@
  *= require_self
  */
 
+.collapse {
+  background-color: blue;
+}
+
 ul {
  list-style: none;
  padding-left:0;
 }
 li {
   padding: .25em;
+}
+
+.collapse li {
+  display: inline;
 }
