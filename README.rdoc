@@ -1,30 +1,20 @@
-== README
+Workout Now! - Ruby on Rails App
+Project 1 for General Assembly Web Development Immersive Program
+May 23, 2014
 
-Web URL:  http://workoutnow.herokuapp.com
+URL:  http://workoutnow.herokuapp.com
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Description: WorkoutNow! allows you to generate fresh workouts that consist of fun, challenging exercises. Once the workout has been generated, Users can run through the exercises and save the workout (log in required) if they decide they like it. Although the original idea was to have a large variety of exercises, the only category available in this project is "Bodyweight" (i.e. strength exercises that do not require weights). The database comes with 27 exercises.
 
-Things you may want to cover:
+Features included in this demo:
+- User can generate workouts of a desired duration (up to 30 minutes)
+- User can save workouts and rename them.
+- User can access his/her saved workouts and view them at any given time.
+- User can log in and log out.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Ruby version: 2.1.1p76
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+
+
+
