@@ -3,4 +3,6 @@
 
   <h1><%= f.text_field :name %></h1>
   <%= f.submit class: "btn btn-default" %>
-<% end %>
+  <% end %>
+
+  <%= render 'displayworkout', exercises: @exercises %>

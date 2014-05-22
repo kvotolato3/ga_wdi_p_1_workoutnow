@@ -1,16 +1,17 @@
 class WorkoutsController < ApplicationController
   before_action :authenticate_user!
+
   def index
     @workouts = Workout.where(user_id: current_user)
   end
 
   def create
     @workout = Workout.new(user_id: current_user.id)
-    @workout.save
     @exercises = params[:workout]["exercise_ids"].split(',')
     @exercises.each do |exercise|
       @workout.exercises << Exercise.find(exercise.to_i)
     end
+    @workout.save
     @workout.sum_duration
     flash[:notice] = 'Workout has been successfully saved!'
     redirect_to workout_path(@workout)
@@ -23,6 +24,7 @@ class WorkoutsController < ApplicationController
 
   def edit
     @workout = Workout.find(params[:id])
+    @exercises = @workout.exercises
   end
 
   def update
