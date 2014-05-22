@@ -1,4 +1,4 @@
-<h1>List of saved workouts</h1>
+<h1>My saved workouts</h1>
   <ul>
   <% @workouts.each do |workout| %>
     <li><%= link_to workout.name, workout_path(workout) %> | Duration: <%= workout.duration %> minutes<br>
