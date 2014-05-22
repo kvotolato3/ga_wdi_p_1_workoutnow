@@ -36,15 +36,19 @@
         <% flash.each do |key, message| %>
         <%= content_tag :div, message, class: key %>
         <% end %>
-        <%= yield %>
       </div>
       <div class="col-md-2"></div>
-      <% if Rails.env.development?%>
-      <p><%= params.inspect %></p>
-      <p><%= flash.inspect %></p>
-      <% end %>
     </div>
   </div>
+
+<%= yield %>
+
+<% if Rails.env.development?%>
+<p><%= params.inspect %></p>
+<p><%= flash.inspect %></p>
+<% end %>
+
+
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script src="js/bootstrap.js"></script>
 </body>
