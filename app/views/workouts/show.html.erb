@@ -1,12 +1,40 @@
+
+<div id="header">
+  <div class="container">
+    <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="well">
+          <p>Use "Workout Now" to generate a workout of a desired length and category.</p>
+          <form class="form" role="form">
+            <%= form_tag(exercises_path, method: "get") do %>
+            <div class="form-group">
+              <%= label_tag(:desired_duration, "Minutes: ") %>
+              <input id="desired_duration" max="30.0" min="1.0" name="desired_duration" step="1.0" type="number" />
+            </div>
+            <div class="form-group">
+              <%= label_tag(:desired_category, "Category: ") %>
+              <%= select_tag(:desired_category, options_for_select([['Bodyweight','Bodyweight']])) %>
+            </div>
+            <%= submit_tag("Workout Now", class: "btn btn-default") %>
+            <% end %>
+          </form>
+        </div>
+      </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+
+
+
 <div class="container">
   <div class="col-md-2"></div>
   <div class="col-md-8">
-<h1><%= @workout.name %></h1>
-  <%= link_to "Edit Workout", edit_workout_path(@workout), class: "btn btn-default" %>
-  <%= link_to "Delete Workout", @workout, method: :delete, class: "btn btn-default",
-    data: { confirm: 'Are you sure you want to delete this workout?' } %>
-  <%= link_to "My Workouts", workouts_path, class: "btn btn-default" %>
-  <%= render 'displayworkout', exercises: @exercises %>
+    <h1><%= @workout.name %></h1>
+    <%= link_to "Edit Workout", edit_workout_path(@workout), class: "btn btn-default" %>
+    <%= link_to "Delete Workout", @workout, method: :delete, class: "btn btn-default",
+      data: { confirm: 'Are you sure you want to delete this workout?' } %>
+    <%= link_to "My Workouts", workouts_path, class: "btn btn-default" %>
+    <%= render 'displayworkout', exercises: @exercises %>
   </div>
   <div class="col-md-2"></div>
 </div>
