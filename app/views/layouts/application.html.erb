@@ -32,14 +32,14 @@
   </div>
   <div class="container">
     <div class="row-fluid">
-      <div class="col-md-3"></div>
-      <div class="col-md-6">
+      <div class="col-md-2"></div>
+      <div class="col-md-8">
         <% flash.each do |key, message| %>
         <%= content_tag :div, message, class: key %>
         <% end %>
         <%= yield %>
       </div>
-      <div class="col-md-3"></div>
+      <div class="col-md-2"></div>
       <% if Rails.env.development?%>
       <p><%= params.inspect %></p>
       <p><%= flash.inspect %></p>
