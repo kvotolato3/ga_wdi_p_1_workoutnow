@@ -1,13 +1,4 @@
 
-<% if @exercises %>
-<h1>Your personalized workout</h1>
-<%= form_for @workout do |f| %>
-<%= f.hidden_field :exercise_ids, value: @exercises.map(&:id).join(",") %>
-<%= f.submit "Save this workout", class: "btn btn-default" %>
-<% end %>
-<%= render 'workouts/displayworkout', exercises: @exercises %>
-
-<% else %>
 <div id="header">
   <div class="container">
     <div class="col-md-4"></div>
@@ -32,4 +23,17 @@
     <div class="col-md-4"></div>
   </div>
 </div>
-<% end %>
+<div class="container">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+    <% if @exercises %>
+    <h1>Your personalized workout</h1>
+      <%= form_for @workout do |f| %>
+      <%= f.hidden_field :exercise_ids, value: @exercises.map(&:id).join(",") %>
+      <%= f.submit "Save this workout", class: "btn btn-default" %>
+      <% end %>
+    <%= render 'workouts/displayworkout', exercises: @exercises %>
+    <% end %>
+  </div>
+  <div class="col-md-2"></div>
+</div>
