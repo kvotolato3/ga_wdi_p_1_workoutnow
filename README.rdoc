@@ -15,6 +15,13 @@ Features included in this app:
 - User can log in and log out.
 - User can edit his/her profile.
 
+Instructions for local deployment:
+- Clone this repository into your projects folder
+- Run bundle install
+- Create database
+- Run migrations with seed data
+- Run the rails server and enjoy!
+
 Ruby version: 2.1.1p76
 
 
