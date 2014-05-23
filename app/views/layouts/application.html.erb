@@ -46,6 +46,7 @@
 <% if Rails.env.development?%>
 <p><%= params.inspect %></p>
 <p><%= flash.inspect %></p>
+<p><%= cookies[:temp_id].inspect %></p>
 <p><%= exercises_path.inspect %></p>
 <% end %>
 

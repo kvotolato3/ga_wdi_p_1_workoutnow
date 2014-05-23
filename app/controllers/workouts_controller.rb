@@ -1,20 +1,35 @@
 class WorkoutsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :create
 
   def index
     @workouts = current_user.workouts
   end
 
   def create
-    @workout = Workout.new(user_id: current_user.id)
     @exercises = params[:workout]["exercise_ids"].split(',')
+    @workout = Workout.new
     @exercises.each do |exercise|
       @workout.exercises << Exercise.find(exercise.to_i)
     end
-    @workout.save
-    @workout.sum_duration
-    flash[:notice] = 'Workout has been successfully saved!'
-    redirect_to workout_path(@workout)
+
+    # We have two options here:
+    # 1) The User is logged in, in which case we can assign the Workout to the User.
+    # 2) The User is not logged in, in which case we need to generate a unique ID and assign it to the Workout.
+    if user_signed_in?
+      @workout.user_id = current_user.id
+      @workout.save
+      @workout.sum_duration
+      flash[:notice] = 'Workout has been successfully saved!'
+      redirect_to workout_path(@workout)
+    else
+      # Found the 'uuidtools' gem for generating a unique ID.
+      temp_id = UUIDTools::UUID.timestamp_create.to_s
+      @workout.temp_id = temp_id
+      @workout.save
+      @workout.sum_duration
+      cookies[:temp_id] = temp_id
+      redirect_to new_user_session_path
+    end
   end
 
   def show
