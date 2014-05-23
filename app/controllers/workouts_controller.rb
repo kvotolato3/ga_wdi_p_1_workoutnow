@@ -23,11 +23,18 @@ class WorkoutsController < ApplicationController
       redirect_to workout_path(@workout)
     else
       # Found the 'uuidtools' gem for generating a unique ID.
-      temp_id = UUIDTools::UUID.timestamp_create.to_s
+      # If the cookie exists, use that cookie.
+      # If it does not exist, generate one.
+      # Enjoy your cookies with milk!
+      if cookies[:temp_id].present?
+        temp_id = cookies[:temp_id]
+      else
+        temp_id = UUIDTools::UUID.timestamp_create.to_s
+        cookies[:temp_id] = temp_id
+      end
       @workout.temp_id = temp_id
       @workout.save
       @workout.sum_duration
-      cookies[:temp_id] = temp_id
       redirect_to new_user_session_path
     end
   end
