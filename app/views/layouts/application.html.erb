@@ -18,7 +18,7 @@
         <%= link_to "Workout Now!", root_path, class: "navbar-brand"%>
         <ul class="nav navbar-nav navbar-right">
           <% if user_signed_in? %>
-          <li id="logged_in">Logged in as <%= current_user.email %>.</li>
+          <li><%= link_to "View workouts for #{current_user.email}", workouts_path%></li>
           <li><%= link_to 'Edit profile', edit_user_registration_path %></li>
           <li><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           <% else %>
