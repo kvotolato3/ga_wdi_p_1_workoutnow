@@ -2,7 +2,7 @@ class WorkoutsController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @workouts = Workout.where(user_id: current_user)
+    @workouts = current_user.workouts
   end
 
   def create
@@ -38,6 +38,7 @@ class WorkoutsController < ApplicationController
 
   def destroy
     workout = Workout.find(params[:id])
+    binding.pry
     workout.destroy
     redirect_to workouts_path
   end
