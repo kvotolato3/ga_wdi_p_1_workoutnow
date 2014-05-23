@@ -7,4 +7,8 @@ class Workout < ActiveRecord::Base
     self.duration = self.exercises.sum(:seconds_duration)/60
     self.save
   end
+
+  def temp_user_id
+    UUIDTools::UUID.timestamp_create.to_s
+  end
 end
