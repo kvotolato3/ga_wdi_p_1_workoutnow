@@ -60,7 +60,6 @@ class WorkoutsController < ApplicationController
 
   def destroy
     workout = Workout.find(params[:id])
-    binding.pry
     workout.destroy
     redirect_to workouts_path
   end
