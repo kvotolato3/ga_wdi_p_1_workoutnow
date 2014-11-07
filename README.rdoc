@@ -4,7 +4,7 @@ Project 1 for General Assembly Web Development Immersive Program
 
 May 23, 2014
 
-URL:  http://workoutnow.herokuapp.com
+http://workoutnow-general-assembly.herokuapp.com
 
 Description: WorkoutNow! allows you to generate fresh workouts from a database of fun Bodyweight exercises (i.e. strength exercises that do not require weights). Once the workout has been generated, Users can practice the exercises and save the workout (log in required) if they decide they like it. The database comes with 27 exercises.
 
